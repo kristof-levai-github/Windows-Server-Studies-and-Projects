@@ -1,0 +1,29 @@
+DN,objectClass,sAMAccountName,sn,givenName,userPrincipalName,userAccountControl
+"cn=Rigó Sarolta,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,rigsa,Rigó,Sarolta,rigsa@gyakorlat.local,8389152
+"cn=Tompos Gyula,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,tomgy,Tompos,Gyula,tomgy@gyakorlat.local,8389152
+"cn=Truppel Imre,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,truim,Truppel,Imre,truim@gyakorlat.local,8389152
+"cn=Mihály Ibolya,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,mihib,Mihály,Ibolya,mihib@gyakorlat.local,8389152
+"cn=Dobos Krisztián,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,dobkr,Dobos,Kriszti n,dobkr@gyakorlat.local,8389152
+"cn=Petrus Katalin,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,petka,Petrus,Katalin,petka@gyakorlat.local,8389152
+"cn=Nagy Nikolett,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,nagni,Nagy,Nikolett,nagni@gyakorlat.local,8389152
+"cn=Bagó Zsuzsa,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,bagzs,Bagó,Zsuzsa,bagzs@gyakorlat.local,8389152
+"cn=Csicsay Edit,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,csied,Csicsay,Edit,csied@gyakorlat.local,8389152
+"cn=Botka Edina,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,boted,Botka,Edina,boted@gyakorlat.local,8389152
+"cn=Hegedûs Zsolt,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,hegzs,Hegedûs,Zsolt,hegzs@gyakorlat.local,8389152
+"cn=Valicsek Antal,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,valan,Valicsek,Antal,valan@gyakorlat.local,8389152
+"cn=Nagy Etelka,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,naget,Nagy,Etelka,naget@gyakorlat.local,8389152
+"cn=Hebrank Erzsébet,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,heber,Hebrank,Erzsébet,heber@gyakorlat.local,8389152
+"cn=Ivicz Anna,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,ivian,Ivicz,Anna,ivian@gyakorlat.local,8389152
+"cn=Madari Ilona,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,madil,Madari,Ilona,madil@gyakorlat.local,8389152
+"cn=Antal Ernõ,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,anter,Antal,Ernõ,anter@gyakorlat.local,8389152
+"cn=Farkas Ibolya,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,farib,Farkas,Ibolya,farib@gyakorlat.local,8389152
+"cn=Kovács Csaba,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,kovcs,Kovács,Csaba,kovcs@gyakorlat.local,8389152
+"cn=Havasi Rita,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,havri,Havasi,Rita,havri@gyakorlat.local,8389152
+"cn=Karsay Nikolett,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,karni,Karsay,Nikolett,karni@gyakorlat.local,8389152
+"cn=Farkas Edina,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,fared,Farkas,Edina,fared@gyakorlat.local,8389152
+"cn=Stezák Mihály,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,stemi,Stezák,Mihály,stemi@gyakorlat.local,8389152
+"cn=Huber Zoltán,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,hubzo,Huber,Zoltán,hubzo@gyakorlat.local,8389152
+"cn=Szubanek Gabriella,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,szuga,Szubanek,Gabriella,szuga@gyakorlat.local,8389152
+"cn=Erdõs Mihály,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,erdmi,Erdõs,Mihály,erdmi@gyakorlat.local,8389152
+"cn=Papp István,ou=Igazgatas,ou=Vallalat,dc=gyakorlat,dc=local",user,papis,Papp,István,papis@gyakorlat.local,8389152
+"cn=Lukács Zsolt,ou=Kivitelezes,ou=Vallalat,dc=gyakorlat,dc=local",user,lukzs,Lukács,Zsolt,lukzs@gyakorlat.local,8389152
