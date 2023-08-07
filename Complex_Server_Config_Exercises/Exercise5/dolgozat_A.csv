@@ -1,0 +1,3 @@
+DN,objectClass,sAMAccountName,sn,givenName,userPrincipalName,userAccountControl
+"cn=Tanár Egy,ou=Tanarok,ou=Iskola,dc=dolgozat,dc=local",user,tanar1,Tanár,Egy,tanar1@dolgozat.local,8389152
+"cn=Tanár Kettõ,ou=Tanarok,ou=Iskola,dc=dolgozat,dc=local",user,tanar2,Tanár,Kettõ,tanar2@dolgozat.local,8389152
