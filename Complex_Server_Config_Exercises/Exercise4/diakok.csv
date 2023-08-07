@@ -1,0 +1,5 @@
+DN,objectClass,sAMAccountName,sn,givenName,userPrincipalName,userAccountControl
+"cn=Viola Nyeste,ou=diakok,ou=Iskola,dc=dolgozat,dc=local",user,diak1,Nyeste,Viola,viola@dolgozat.local,8389152
+"cn=Edit Tokaji,ou=diakok,ou=Iskola,dc=dolgozat,dc=local",user,diak2,Tokaji,Edit,edit@dolgozat.local,8389152
+"cn=Judit Barta,ou=diakok,ou=Iskola,dc=dolgozat,dc=local",user,diak3,Barta,Judit,judit@dolgozat.local,8389152
+"cn=Emma Morvai,ou=diakok,ou=Iskola,dc=dolgozat,dc=local",user,diak4,Morvai,Emma,emma@dolgozat.local,8389152
