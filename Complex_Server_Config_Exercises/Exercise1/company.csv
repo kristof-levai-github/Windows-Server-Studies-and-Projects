@@ -1,0 +1,5 @@
+DN,objectClass,sAMAccountName,sn,givenName,userPrincipalName,userAccountControl
+"cn=Amelie Sweet,ou=company,dc=company,dc=local",user,amelie,Sweet,Amelie,amelie@company.local,8389152
+"cn=John Thorp,ou=company,dc=company,dc=local",user,john,Thorp,John,john@company.local,8389152
+"cn=Jack Steelman,ou=company,dc=company,dc=local",user,jack,Steelman,Jack,jack@company.local,8389152
+"cn=Alice Morgan,ou=company,dc=company,dc=local",user,alice,Morgan,Alice,alice@company.local,8389152
