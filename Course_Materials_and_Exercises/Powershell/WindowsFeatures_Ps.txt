@@ -1,0 +1,273 @@
+PS C:\Users\Rendszergazda> get-WindowsFeature 
+
+Display Name                                            Name                       Install State
+------------                                            ----                       -------------
+[ ] A Windows Server Essentials felhasználói felülete   ServerEssentialsRole           Available
+[ ] Active Directory Lightweight Directory-szolgálta... ADLDS                          Available
+[ ] Active Directory összevonási szolgáltatások         ADFS-Federation                Available
+[ ] Active Directory tanúsítványszolgáltatások          AD-Certificate                 Available
+    [ ] Hitelesítésszolgáltató                          ADCS-Cert-Authority            Available
+    [ ] Hálózati eszközök tanúsítványigénylési szolg... ADCS-Device-Enrollment         Available
+    [ ] Online válaszadó                                ADCS-Online-Cert               Available
+    [ ] Tanúsítványigénylési szabályzat webszolgálta... ADCS-Enroll-Web-Pol            Available
+    [ ] Tanúsítványigénylési webszolgáltatás            ADCS-Enroll-Web-Svc            Available
+    [ ] Webes hitelesítésszolgáltatói igénylés          ADCS-Web-Enrollment            Available
+[ ] Active Directory tartalomvédelmi szolgáltatások     ADRMS                          Available
+    [ ] Active Directory tartalomvédelmi szolgáltatások ADRMS-Server                   Available
+    [ ] Identitás-összevonás támogatása                 ADRMS-Identity                 Available
+[ ] Active Directory tartományi szolgáltatások          AD-Domain-Services             Available
+[ ] Alkalmazáskiszolgáló                                Application-Server             Available
+    [ ] .NET-keretrendszer 4.5                          AS-NET-Framework               Available
+    [ ] COM+ hálózati hozzáférés                        AS-Ent-Services                Available
+    [ ] Elosztott tranzakciók                           AS-Dist-Transaction            Available
+        [ ] Webszolgáltatások atomi tranzakciói         AS-WS-Atomic                   Available
+        [ ] Bejövő hálózati tranzakciók                 AS-Incoming-Trans              Available
+        [ ] Kimenő hálózati tranzakciók                 AS-Outgoing-Trans              Available
+    [ ] TCP-port megosztása                             AS-TCP-Port-Sharing            Available
+    [ ] Webkiszolgáló (IIS) támogatása                  AS-Web-Support                 Available
+    [ ] Windows folyamataktivációs szolgáltatás támo... AS-WAS-Support                 Available
+        [ ] Aktiválás Message Queuing szolgáltatáson... AS-MSMQ-Activation             Available
+        [ ] Aktiválás nevesített csöveken keresztül     AS-Named-Pipes                 Available
+        [ ] HTTP-aktiválás                              AS-HTTP-Activation             Available
+        [ ] TCP-aktiválás                               AS-TCP-Activation              Available
+[ ] DHCP-kiszolgáló                                     DHCP                           Available
+[ ] DNS-kiszolgáló                                      DNS                            Available
+[X] Fájl- és tárolási szolgáltatások                    FileAndStorage-Services        Installed
+    [ ] Fájl- és iSCSI-szolgáltatások                   File-Services                  Available
+        [ ] Fájlkiszolgáló                              FS-FileServer                  Available
+        [ ] Adatok deduplikációja                       FS-Data-Deduplication          Available
+        [ ] BranchCache hálózati fájlokhoz              FS-BranchCache                 Available
+        [ ] Elosztott fájlrendszer replikációs szolg... FS-DFS-Replication             Available
+        [ ] Elosztott fájlrendszerbeli névterek         FS-DFS-Namespace               Available
+        [ ] Fájlkiszolgáló VSS ügynökszolgáltatása      FS-VSS-Agent                   Available
+        [ ] Fájlkiszolgálói erőforrás-kezelő            FS-Resource-Manager            Available
+        [ ] iSCSI-tároló társzolgáltatója (VDS- és V... iSCSITarget-VSS-VDS            Available
+        [ ] iSCSI-tárolókiszolgáló                      FS-iSCSITarget-Server          Available
+        [ ] Munkahelyi mappák                           FS-SyncShareService            Available
+        [ ] NFS-kiszolgálószolgáltatás                  FS-NFS-Service                 Available
+    [X] Tárolási szolgáltatások                         Storage-Services               Installed
+[ ] Faxkiszolgáló                                       Fax                            Available
+[ ] Hálózati házirend- és elérési szolgáltatások        NPAS                           Available
+    [ ] Hálózati házirend-kiszolgáló                    NPAS-Policy-Server             Available
+    [ ] Állapotjegyző                                   NPAS-Health                    Available
+    [ ] HCAP protokoll                                  NPAS-Host-Cred                 Available
+[ ] Hyper-V                                             Hyper-V                        Available
+[ ] Központi Windows-telepítési szolgáltatások          WDS                            Available
+    [ ] Központi telepítési kiszolgáló                  WDS-Deployment                 Available
+    [ ] Továbbítókiszolgáló                             WDS-Transport                  Available
+[ ] Mennyiségi aktiválási szolgáltatások                VolumeActivation               Available
+[ ] Nyomtató- és dokumentumszolgáltatások               Print-Services                 Available
+    [ ] Nyomtatókiszolgáló                              Print-Server                   Available
+    [ ] Elosztott beolvasási kiszolgáló                 Print-Scan-Server              Available
+    [ ] Internetes nyomtatás                            Print-Internet                 Available
+    [ ] LPD szolgáltatás                                Print-LPD-Service              Available
+[ ] Távelérés                                           RemoteAccess                   Available
+    [ ] DirectAccess és VPN (RAS)                       DirectAccess-VPN               Available
+    [ ] Útválasztás                                     Routing                        Available
+    [ ] Webalkalmazás-proxy                             Web-Application-Proxy          Available
+[ ] Távoli asztali szolgáltatások                       Remote-Desktop-Services        Available
+    [ ] Távoli asztali átjáró                           RDS-Gateway                    Available
+    [ ] Távoli asztali kapcsolatszervező                RDS-Connection-Broker          Available
+    [ ] Távoli asztali licencelés                       RDS-Licensing                  Available
+    [ ] Távoli asztali munkamenetgazda                  RDS-RD-Server                  Available
+    [ ] Távoli asztali virtualizálási kiszolgáló        RDS-Virtualization             Available
+    [ ] Távoli asztali webes elérés                     RDS-Web-Access                 Available
+[ ] Webkiszolgáló (IIS)                                 Web-Server                     Available
+    [ ] Webkiszolgáló                                   Web-WebServer                  Available
+        [ ] Állapot és diagnosztika                     Web-Health                     Available
+            [ ] HTTP-naplózás                           Web-Http-Logging               Available
+            [ ] Egyéni naplózás                         Web-Custom-Logging             Available
+            [ ] Kérelemfigyelő                          Web-Request-Monitor            Available
+            [ ] Naplózási eszközök                      Web-Log-Libraries              Available
+            [ ] Nyomkövetés                             Web-Http-Tracing               Available
+            [ ] ODBC-naplózás                           Web-ODBC-Logging               Available
+        [ ] Általános HTTP-szolgáltatások               Web-Common-Http                Available
+            [ ] Alapértelmezett dokumentum              Web-Default-Doc                Available
+            [ ] HTTP-hibák                              Web-Http-Errors                Available
+            [ ] Könyvtár tallózása                      Web-Dir-Browsing               Available
+            [ ] Statikus tartalom                       Web-Static-Content             Available
+            [ ] HTTP-átirányítás                        Web-Http-Redirect              Available
+            [ ] WebDAV-közzététel                       Web-DAV-Publishing             Available
+        [ ] Biztonság                                   Web-Security                   Available
+            [ ] Kérelmek szűrése                        Web-Filtering                  Available
+            [ ] Egyszerű hitelesítés                    Web-Basic-Auth                 Available
+            [ ] IIS ügyféltanúsítvány-hozzárendelése... Web-Cert-Auth                  Available
+            [ ] IP-cím és tartomány korlátozása         Web-IP-Security                Available
+            [ ] Kivonatoló hitelesítés                  Web-Digest-Auth                Available
+            [ ] SSL-tanúsítványok központosított tám... Web-CertProvider               Available
+            [ ] URL engedélyezése                       Web-Url-Auth                   Available
+            [ ] Ügyféltanúsítvány-hozzárendeléses hi... Web-Client-Auth                Available
+            [ ] Windows-hitelesítés                     Web-Windows-Auth               Available
+        [ ] Teljesítmény                                Web-Performance                Available
+            [ ] Statikus tartalom tömörítése            Web-Stat-Compression           Available
+            [ ] Dinamikus tartalom tömörítése           Web-Dyn-Compression            Available
+        [ ] Alkalmazásfejlesztés                        Web-App-Dev                    Available
+            [ ] .NET-kiterjeszthetőség 3.5              Web-Net-Ext                    Available
+            [ ] .NET-kiterjeszthetőség 4.5              Web-Net-Ext45                  Available
+            [ ] Alkalmazásinicializálás                 Web-AppInit                    Available
+            [ ] ASP                                     Web-ASP                        Available
+            [ ] ASP.NET 3.5                             Web-Asp-Net                    Available
+            [ ] ASP.NET 4.5                             Web-Asp-Net45                  Available
+            [ ] CGI                                     Web-CGI                        Available
+            [ ] ISAPI-bővítmények                       Web-ISAPI-Ext                  Available
+            [ ] ISAPI-szűrők                            Web-ISAPI-Filter               Available
+            [ ] Kiszolgálóoldali beágyazás              Web-Includes                   Available
+            [ ] WebSocket protokoll                     Web-WebSockets                 Available
+    [ ] FTP-kiszolgáló                                  Web-Ftp-Server                 Available
+        [ ] FTP szolgáltatás                            Web-Ftp-Service                Available
+        [ ] FTP-kiterjeszthetőség                       Web-Ftp-Ext                    Available
+    [ ] Kezelőeszközök                                  Web-Mgmt-Tools                 Available
+        [ ] IIS-kezelő konzol                           Web-Mgmt-Console               Available
+        [ ] IIS 6 kompatibilitási üzemmód               Web-Mgmt-Compat                Available
+            [ ] Kompatibilitás az IIS 6 metabázisával   Web-Metabase                   Available
+            [ ] IIS 6 parancsprogram-kezelő eszközök    Web-Lgcy-Scripting             Available
+            [ ] IIS 6 WMI kompatibilitási mód           Web-WMI                        Available
+            [ ] IIS 6-kezelő konzol                     Web-Lgcy-Mgmt-Console          Available
+        [ ] IIS-kezelési parancsprogramok és eszközök   Web-Scripting-Tools            Available
+        [ ] Kezelési szolgáltatás                       Web-Mgmt-Service               Available
+[ ] Windows Server Update Services                      UpdateServices                 Available
+    [ ] A Windows belső adatbázisának adatbázisa        UpdateServices-WidDB           Available
+    [ ] A WSUS szolgáltatásai                           UpdateServices-Services        Available
+    [ ] Adatbázis                                       UpdateServices-DB              Available
+[ ] A .NET-keretrendszer 3.5 funkciói                   NET-Framework-Features         Available
+    [ ] .NET-keretrendszer 3.5 (a .NET 2.0 és 3.0 a ... NET-Framework-Core               Removed
+    [ ] HTTP nélküli aktiválás                          NET-Non-HTTP-Activ             Available
+    [ ] HTTP-aktiválás                                  NET-HTTP-Activation            Available
+[X] A .NET-keretrendszer 4.5 funkciói                   NET-Framework-45-Fea...        Installed
+    [X] .NET-keretrendszer 4.5                          NET-Framework-45-Core          Installed
+    [ ] ASP.NET 4.5                                     NET-Framework-45-ASPNET        Available
+    [X] WCF-szolgáltatások                              NET-WCF-Services45             Installed
+        [ ] Aktiválás Message Queuing szolgáltatáson... NET-WCF-MSMQ-Activat...        Available
+        [ ] HTTP-aktiválás                              NET-WCF-HTTP-Activat...        Available
+        [ ] Nevesített csövek aktiválása                NET-WCF-Pipe-Activat...        Available
+        [ ] TCP-aktiválás                               NET-WCF-TCP-Activati...        Available
+        [X] TCP-portmegosztás                           NET-WCF-TCP-PortShar...        Installed
+[ ] Adatközponthíd-képzés                               Data-Center-Bridging           Available
+[ ] Belső Windows-adatbázis                             Windows-Internal-Dat...        Available
+[ ] BitLocker hálózati feloldás                         BitLocker-NetworkUnlock        Available
+[ ] BitLocker meghajtótitkosítás                        BitLocker                      Available
+[ ] BranchCache                                         BranchCache                    Available
+[ ] Csoportházirend kezelése                            GPMC                           Available
+[ ] DirectPlay                                          Direct-Play                    Available
+[ ] Egyszerű TCP/IP-szolgáltatások                      Simple-TCPIP                   Available
+[ ] Emelt szintű tároló                                 EnhancedStorage                Available
+[ ] Feladatátvételi fürtszolgáltatás                    Failover-Clustering            Available
+[X] Felhasználói felületek és infrastruktúra            User-Interfaces-Infra          Installed
+    [X] Grafikus felügyeleti eszközök és infrastruktúra Server-Gui-Mgmt-Infra          Installed
+    [ ] Asztali élmény                                  Desktop-Experience             Available
+    [X] Kiszolgálói grafikus felület                    Server-Gui-Shell               Installed
+[ ] Hálózati terheléselosztás                           NLB                            Available
+[ ] Háttérben futó intelligens átviteli szolgáltatás... BITS                           Available
+    [ ] IIS kiszolgálóbővítmény                         BITS-IIS-Ext                   Available
+    [ ] Kompakt kiszolgáló                              BITS-Compact-Server            Available
+[ ] IIS üzemeltethető webmagja                          Web-WHC                        Available
+[ ] Internetes nyomtatási ügyfél                        Internet-Print-Client          Available
+[ ] IP-címkezelési (IPAM) kiszolgáló                    IPAM                           Available
+[ ] iSNS-kiszolgáló szolgáltatás                        ISNS                           Available
+[ ] LPR-portfigyelő                                     LPR-Port-Monitor               Available
+[ ] Minőségi audiovizuális Windows-élmény               qWave                          Available
+[ ] Multimédia alaprendszer                             Server-Media-Foundation        Available
+[ ] NFS-ügyfélszolgáltatás                              NFS-Client                     Available
+[ ] OData-felügyeleti IIS-bővítmény                     ManagementOdata                Available
+[ ] PNRP protokoll                                      PNRP                           Available
+[ ] RAS - csatlakozáskezelő felügyeleti csomag (CMAK)   CMAK                           Available
+[ ] RPC HTTP-n keresztül proxy                          RPC-over-HTTP-Proxy            Available
+[X] SMB 1.0/CIFS rendszerű fájlmegosztási támogatás     FS-SMB1                        Installed
+[ ] SMB Bandwidth Limit                                 FS-SMBBW                       Available
+[ ] SMTP-kiszolgáló                                     SMTP-Server                    Available
+[ ] SNMP szolgáltatás                                   SNMP-Service                   Available
+    [ ] SNMP WMI-szolgáltató                            SNMP-WMI-Provider              Available
+[ ] Szabadkézi beviteli és kézírás-felismerő szolgál... InkAndHandwritingSer...        Available
+[X] Távoli kiszolgálófelügyelet eszközei                RSAT                           Installed
+    [X] Szerepkör-felügyeleti eszközök                  RSAT-Role-Tools                Installed
+        [X] AD DS- és AD LDS-eszközök                   RSAT-AD-Tools                  Installed
+            [X] Active Directory-modul a Windows Pow... RSAT-AD-PowerShell             Installed
+            [ ] Az Active Directory Lightweight Dire... RSAT-ADLDS                     Available
+            [ ] Az Active Directory tartományi szolg... RSAT-ADDS                      Available
+                [ ] Active Directory felügyeleti köz... RSAT-AD-AdminCenter            Available
+                [ ] Az Active Directory tartományi s... RSAT-ADDS-Tools                Available
+                [ ] NIS-kiszolgáló eszközei [ELAVULT]   RSAT-NIS                       Available
+        [ ] Hyper-V kezelőeszközök                      RSAT-Hyper-V-Tools             Available
+            [ ] Grafikus felületű Hyper-V kezelőeszk... Hyper-V-Tools                  Available
+            [ ] Hyper-V modul a Windows PowerShell k... Hyper-V-PowerShell             Available
+        [ ] Távoli asztali szolgáltatások eszközei      RSAT-RDS-Tools                 Available
+            [ ] Távoli asztali átjáró eszközei          RSAT-RDS-Gateway               Available
+            [ ] Távoli asztali licencelés diagnoszti... RSAT-RDS-Licensing-D...        Available
+            [ ] Távoli asztali licencelés eszközei      RDS-Licensing-UI               Available
+        [ ] Windows Server Update Services-eszközök     UpdateServices-RSAT            Available
+            [ ] API- és PowerShell-alapú parancsmagok   UpdateServices-API             Available
+            [ ] Kezelőkonzol felhasználói felülete      UpdateServices-UI              Available
+        [ ] A fájlszolgáltatások eszközei               RSAT-File-Services             Available
+            [ ] Elosztott fájlrendszer kezelőeszközei   RSAT-DFS-Mgmt-Con              Available
+            [ ] Fájlkiszolgálói erőforrás-kezelő esz... RSAT-FSRM-Mgmt                 Available
+            [ ] Hálózati fájlrendszer kezelőeszközei... RSAT-NFS-Admin                 Available
+            [ ] Megosztások és tárolók kezelése eszköz  RSAT-CoreFile-Mgmt             Available
+        [ ] A faxkiszolgáló eszközei                    RSAT-Fax                       Available
+        [ ] A Hálózati házirend- és elérési szolgált... RSAT-NPAS                      Available
+        [ ] A Központi Windows-telepítési szolgáltat... WDS-AdminPack                  Available
+        [ ] A nyomtató- és dokumentumszolgáltatások ... RSAT-Print-Services            Available
+        [ ] Az Active Directory tanúsítványszolgálta... RSAT-ADCS                      Available
+            [ ] Az Online válaszadó eszközei            RSAT-Online-Responder          Available
+            [ ] Hitelesítésszolgáltató-kezelő eszközök  RSAT-ADCS-Mgmt                 Available
+        [ ] Az Active Directory tartalomvédelmi szol... RSAT-ADRMS                     Available
+        [ ] DHCP-kiszolgálói eszközök                   RSAT-DHCP                      Available
+        [ ] DNS-kiszolgálói eszközök                    RSAT-DNS-Server                Available
+        [ ] Mennyiségi aktiválási eszközök              RSAT-VA-Tools                  Available
+        [ ] Távelérés-kezelési eszközök                 RSAT-RemoteAccess              Available
+            [ ] Távelérési grafikus felhasználói fel... RSAT-RemoteAccess-Mgmt         Available
+            [ ] Távelérési modul a Windows PowerShel... RSAT-RemoteAccess-Po...        Available
+    [ ] Szolgáltatás-felügyeleti eszközök               RSAT-Feature-Tools             Available
+        [ ] SMTP-kiszolgáló eszközei                    RSAT-SMTP                      Available
+        [ ] A Feladatátvételi fürtszolgáltatás eszközei RSAT-Clustering                Available
+            [ ] Failover Cluster Module for Windows ... RSAT-Clustering-Powe...        Available
+            [ ] Feladatátvevőfürt-kezelő eszközei       RSAT-Clustering-Mgmt           Available
+            [ ] Feladatátvételi szolgáltatás automat... RSAT-Clustering-Auto...        Available
+            [ ] Feladatátvételi szolgáltatás parancs... RSAT-Clustering-CmdI...        Available
+        [ ] A Hálózati terheléselosztás eszközei        RSAT-NLB                       Available
+        [ ] BitLocker meghajtótitkosítás felügyeleti... RSAT-Feature-Tools-B...        Available
+            [ ] BitLocker helyreállításijelszó-megje... RSAT-Feature-Tools-B...        Available
+            [ ] BitLocker meghajtótitkosítási eszközök  RSAT-Feature-Tools-B...        Available
+        [ ] BITS kiszolgálói bővítményeszközök          RSAT-Bits-Server               Available
+        [ ] IP-címkezelési (IPAM) ügyfél                IPAM-Client-Feature            Available
+        [ ] SNMP-eszközök                               RSAT-SNMP                      Available
+        [ ] WINS-kiszolgáló eszközei                    RSAT-WINS                      Available
+[ ] Távoli különbözeti tömörítés                        RDC                            Available
+[ ] Távsegítség                                         Remote-Assistance              Available
+[ ] Telnet-kiszolgáló                                   Telnet-Server                  Available
+[ ] Telnet-ügyfél                                       Telnet-Client                  Available
+[ ] TFTP-ügyfél                                         TFTP-Client                    Available
+[ ] Többutas I/O                                        Multipath-IO                   Available
+[ ] Üzenetsor-kezelés                                   MSMQ                           Available
+    [ ] Üzenetsor-kezelési szolgáltatások               MSMQ-Services                  Available
+        [ ] Üzenetsor-kezelési kiszolgáló               MSMQ-Server                    Available
+        [ ] Címtárszolgáltatások integrációja           MSMQ-Directory                 Available
+        [ ] Csoportos küldés támogatása                 MSMQ-Multicasting              Available
+        [ ] HTTP-támogatás                              MSMQ-HTTP-Support              Available
+        [ ] Útválasztási szolgáltatás                   MSMQ-Routing                   Available
+        [ ] Üzenetsor-kezelési eseményindítók           MSMQ-Triggers                  Available
+    [ ] Üzenetsor-kezelési DCOM-proxy                   MSMQ-DCOM                      Available
+[ ] Vezeték nélküli helyi hálózat szolgáltatás          Wireless-Networking            Available
+[ ] Windows biometriai keretrendszer                    Biometric-Framework            Available
+[ ] Windows folyamataktivációs szolgáltatás             WAS                            Available
+    [ ] Folyamatmodell                                  WAS-Process-Model              Available
+    [ ] .NET-környezet 3.5                              WAS-NET-Environment            Available
+    [ ] Konfigurációs API-felületek                     WAS-Config-APIs                Available
+[ ] Windows Identity Foundation 3.5                     Windows-Identity-Fou...        Available
+[X] Windows PowerShell                                  PowerShellRoot                 Installed
+    [X] Windows PowerShell 4.0                          PowerShell                     Installed
+    [ ] A Windows PowerShell célállapot-konfiguráló ... DSC-Service                    Available
+    [ ] Webes Windows PowerShell-elérés                 WindowsPowerShellWeb...        Available
+    [ ] Windows PowerShell 2.0 motor                    PowerShell-V2                    Removed
+    [X] Windows PowerShell ISE                          PowerShell-ISE                 Installed
+[ ] Windows Search szolgáltatás                         Search-Service                 Available
+[ ] Windows Server áttelepítési eszközök                Migration                      Available
+[ ] Windows Server biztonsági másolat                   Windows-Server-Backup          Available
+[ ] Windows szabványalapú tárolókezelés                 WindowsStorageManage...        Available
+[ ] Windows TIFF IFilter indexszűrő                     Windows-TIFF-IFilter           Available
+[ ] Windows visszajelzés-továbbító                      WFF                            Available
+[ ] WinRM IIS-bővítmény                                 WinRM-IIS-Ext                  Available
+[ ] WINS-kiszolgáló                                     WINS                           Available
+[X] WoW64-támogatás                                     WoW64-Support                  Installed
+[ ] XPS-megjelenítő                                     XPS-Viewer                     Available
+
+

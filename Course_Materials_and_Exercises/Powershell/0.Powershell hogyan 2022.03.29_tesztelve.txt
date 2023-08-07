@@ -1,0 +1,595 @@
+Linkek:
+	
+	https://vdocument.in/a-windows-powershell-rejtelmei.html?page=1
+
+	https://docplayer.hu/31065521-Powershell-operacios-rendszerek-windisch-gergely.html
+
+	
+
+Powershell (Ps)
+
+! Powershell indítása rendszergazdaként: (az indító ikon helye, rendszertõl függõen változhat)
+
+Kliensen: 
+	Startmenü programjai között, Windows Powershell, majd jobb egérrel kattintva, menübõl: 'Futtatás rendszergazdaként'
+
+	vagy
+
+	Startmenü ikon (Tálca bal szélén: Windows ikon) jobb egérrel kattintva, menübõl: 'Windows Powershell (rendszergazdaként)'
+
+Szerveren:
+
+	Tálca bal oldalán Windows powershell ikonon jobb egérrel kattintva , menübõl: 'Run as Administrator'
+
+Hogyan kezdjünk neki, ha elindult a konzol?
+
+Másoljuk be soronként az utasításokat: 
+
+	itt kijelölöm a parancsot, Control+C ---> 
+
+	kliensen Powershell konzolban: jobb egérgomb kattintás vagy Control+V 
+		
+		(kifogják tapasztalni, úgy mûködik mint amikor parancssorba másolnak utasítást máshonnan)
+
+		lesz amikor egybõl lefut a parancs és lesz amikor nyomni kell 'Enter'-t
+	
+Próbáljuk ki a következõ parancsokat: (a parancsok mindig beljebb kezdõdnek, egyenként átmásoljuk vagy beírjuk)
+
+	Help
+
+	Get-Help
+
+	Get-He			.. igen, idáig begépelve csak, aztán <TAB> :)
+
+Kérjük le a rendelkezésünkre álló parancsokat:
+
+	Get-Command
+
+Kössük össze a kettõt:
+
+	Get-Help Get-Command
+
+Keressünk a parancsok részeire:
+
+a parancs	=	verb-noun 	pl. Get-Process ,ahol 	verb = Get 	és	noun = Process
+
+	Get-Command -verb Get 
+	
+		például listázza ezeket a parancsokat is:
+			get-service
+			get-help
+			get-command
+
+	Get-Command -noun process
+	
+		például listázza ezeket a parancsokat is:
+			get-process
+			stop-process
+			start-process
+		
+Indítsuk el a Notepad-et, aztán állítsuk le:
+
+	notepad.exe
+
+	Get-Process notepad | Stop-Process
+
+Parancsok:
+
+Kérjük le a dátumot:
+
+	Get-Date
+
+kérjük le a leírást ehhez a parancshoz:
+
+	Get-Help Get-Date
+	
+Hogyan tudnám beállítani a dátumot: 
+
+részletes leírással:
+
+	Get-Help Set-Date -Detailed
+
+a teljes leírás a parancsról:
+
+	Get-Help Set-Date -full
+	
+állítsuk be a pontos idõt:
+	
+	pl. 2022.03.31. 10:15  
+	
+	set-date -date "03/31/2022 10:15"
+
+
+A vezérlõpult ide tartozó részét is indíthatjuk:
+
+	Control timedate.cpl
+
+Alias-ok:
+
+	cls
+	
+	Get-Alias c*
+
+	Get-Alias cls
+
+	Clear-Host 
+
+	clear
+
+Készítsünk egy saját Alias-t:
+
+	Mappa tartalmának kilistázása:
+
+		Set-Alias -Name list -Value get-childitem
+	
+		list
+
+	Jegyzettömb indítása:	
+
+		Set-Alias np notepad.exe
+	
+		np
+
+Függvények: 
+	
+	Get-Command -Type Function
+
+Készítsünk egy saját függvényt:
+
+	function AddNums {
+		$args[0] + $args[1]
+	}
+	
+	a végén kétszer <ENTER> a függvény mentéséhez
+
+Próbáljuk ki a függvényünket: (függvénynév arg1 arg2)
+
+	AddNums 5 10
+
+Eredmény:
+
+	15
+
+A Ps egyébként is ismeri az alapmûveleteket:
+
+	10+5
+
+Át is nevezhetjük a számítógépet:
+
+	Rename-Computer <computername>
+
+Kliensgép felvétele a tartományba: (opcionális)
+
+	Add-Computer TESZT
+
+Kezdeményezhetünk újraindítást:
+
+	Restart-Computer
+
+	
+-----------------------------------
+------- Windows Server 2016 -------
+-----------------------------------
+
+INNENTÕL azt feltételezem, hogy egy nyers, kezdeti állapotban lévõ szerveren dolgoznak. 
+	(Telepítés utáni állapot! Nincsenek telepített szerepkörök!)
+
+Ha még nem állítottuk be, a szerver neve legyen: SRV1-DC
+
+	Rename-Computer SRV1-DC
+
+
+Milyen parancsok érhetõek el? (csak szerveren!)
+
+	Show-Command
+
+vagy ugyanez, rövidebben
+
+	shcm
+	
+keressük ki a Get-DnsClient parancsot 
+	a felugró ablakban (Modules: DnsClient) 
+	másoljuk vágólapra (kattintsunk a Copy gombra), 
+	bezárva az ablakot, 
+	visszatér a Ps-konzolba, 
+	illesszük be (jobb egérgombbal kattintva): 
+
+	Get-DnsClient	<Enter>
+
+Hálózat beállítása:
+
+NET, IP beállítása:  
+
+# itt feltételezzük, hogy a szerver hálózati kapcsolatához még nincs beállítva IP konfiguráció, 
+
+	ipconfig
+
+	Get-NetIPAddress
+	
+# amennyiben már van IP-cím beállítva, elõbb állítsuk át automatikus konfigurációra,
+
+	Visszaállítás automatikus konfigurációra: (feltételezve hogy a hálózati adaptert 'Ethernet' néven hívja a rendszer)
+
+		Set-NetIPInterface -InterfaceAlias 'Ethernet' -Dhcp Enabled
+
+Statikus IP-cím beállítása:
+
+	New-NetIPAddress -IPAddress 192.168.10.1 -InterfaceAlias "Ethernet" -DefaultGateway 192.168.10.254 -AddressFamily IPv4 -PrefixLength 24 
+
+	ncpa.cpl vagy ipconfig /all ellenõrizzük az IP-cím beállítását!
+
+# a DNS kiszolgálót is adjuk meg:
+
+	Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 192.168.10.1 
+
+Beépített menüszerkezetes szerver alap konfiguráló eszköz:
+
+	sconfig
+
+Milyen szerepköröket, szolgáltatásokat érhetünk el?
+	
+	get-windowsfeature
+	
+		(megtalálhatják elmentve a WindowsFeatures_Ps.txt fájlban)
+
+Csak a telepített szerepkörök, szolgáltatások listája:
+
+	Get-WindowsFeature | ? Installed 
+
+Szerepkörök telepítése:	Install-Windowsfeature <featurename>
+
+	Get-Help Install-Windowsfeature 
+
+	Get-Help Add-Windowsfeature
+
+Telepített szerepkörök, szolgáltatások eltávolítása: 
+
+	Uninstall-WindowsFeature <featurename>
+	
+	Remove-Windowsfeature <featurename>
+
+Ellenõrizni amit feltelepítettünk, beállítottunk: (Kiszolgálókezelõ)
+	
+	servermanager
+
+Telepíthetõ szerepkörök:
+
+AD:
+
+	Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+
+Léptessük elõ tartományvezérlõvé: (kérni fog a helyreállító módhoz jelszót)
+
+(újraindítással a folyamat végén):
+	
+	Install-ADDSForest -DomainName teszt.local -InstallDns
+
+(újraindítás nélkül, jelszót itt is kérni fog a helyreállító módhoz):
+	
+	Install-ADDSForest -DomainName teszt.local -InstallDns -NoRebootOnCompletion:$true
+	
+	Ha a Status: Success manuálisan kell újraindítanunk a szervert!
+	
+		Stop-Computer
+	
+			vagy
+	
+		Restart-Computer
+	
+*************************************************************************************
+Vagy ha elmentettük a ServerManager generálta script-et egy régebbi AD telepítésekor, 
+bemásolhatjuk a tartalmát egy .ps1 kiterjesztésû fájlba és onnan is futtathatjuk:
+(a futtatáshoz szükség lehet a végrehajtási házirend módosítására):
+	Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+(ps parancsfájlok használatáról a DHCP kapcsán lesz szó, részletesebben)
+
+ad.ps1 tartalma esetünkben:
+
+	#
+	# Windows PowerShell-parancsfájl az Active Directory tartományi szolgáltatások AD DS központi telepítéséhez
+	#
+	#	`	jellel tagolhatjuk több sorba az utasításokat!
+	#
+	Import-Module ADDSDeployment
+	Install-ADDSForest `
+	-CreateDnsDelegation:$false `
+	-DatabasePath "C:\Windows\NTDS" `
+	-DomainMode "Win2016" `
+	-DomainName "teszt.local" `
+	-DomainNetbiosName "TESZT" `
+	-ForestMode "Win2016" `
+	-InstallDns:$true `
+	-LogPath "C:\Windows\NTDS" `
+	-NoRebootOnCompletion:$true `
+	-SysvolPath "C:\Windows\SYSVOL" `
+	-Force:$true
+*************************************************************************************
+
+A szerver újraindulása után, powershell indítását követõen:
+
+	Get-Module
+
+A modulok betöltése automatikus (amikor szükség lesz rá), 
+de be is tölthetjük az AD Ps-modulját:
+
+	Import-Module ActiveDirectory
+
+Ellenõrizzük a változást:
+
+	Get-Module
+
+Az AD-modulban használható parancsok listája:
+
+	Get-Command -Module ActiveDirectory
+
+Az erdõ adatainak lekérdezése:
+	
+	Get-ADForest
+
+Az tartomány adatainak lekérdezése:	
+	
+	Get-ADDomain
+
+Új szervezeti egység létrehozása (OU: 'Tesztelok'):
+	
+	NEW-ADOrganizationalUnit “Tesztelok”
+
+Új felhasználó létrehozása (user: 'teszt1'):
+	elõre definiált jelszóval, ami legyen: ASDqwe123
+	
+	New-ADUser -SamAccountName "Teszt1" -Name "Teszt1" -userprincipalname "Teszt1@teszt.local" -GivenName "Teszt1" -DisplayName "Teszt1" -Path "OU=Tesztelok,DC=teszt,dc=local" -AccountPassword (ConvertTo-SecureString -AsPlainText 'ASDqwe123' -Force) -Enabled $true 
+	
+	interaktív jelszómegadással (user: 'teszt2'):	
+
+	New-ADUser -SamAccountName "Teszt2" -Name "Teszt2" -userprincipalname "Teszt2@teszt.local" -GivenName "Teszt2" -DisplayName "Teszt2" -Path "OU=Tesztelok,DC=teszt,dc=local" -AccountPassword(Read-Host "Mi legyen a jelszo"  -AsSecureString) -PasswordNeverExpires $true -ChangePasswordAtLogon $false -Enabled $true
+
+Új csoport létrehozása (group: 'tesztelokGrp'):
+
+	New-ADGroup -Name tesztelokGrp -GroupScope Global -GroupCategory Security -Path 'OU=Tesztelok,DC=teszt,DC=local'
+
+Felhasználó felvétele csoportba:
+
+	Add-ADGroupMember -Identity tesztelokGrp -Members Teszt1, Teszt2
+
+vagy:
+
+Létrehozunk egy felhasználót Teszt3 néven de véletlenül a Users (Felhasználók) szervezeti egységben:
+
+	New-ADuser -SamAccountName teszt3 -Name Teszt3 -UserPrincipalName teszt3@teszt.local -AccountPassword(Read-Host "Mi legyen a jelszo"  -AsSecureString) -PasswordNeverExpires $true -ChangePasswordAtLogon $false -Enabled $true
+	
+Áthelyezzük a Tesztelok szervezeti egységbe:
+	
+	Get-ADUser Teszt3 | Move-ADObject -TargetPath 'OU=Tesztelok,DC=teszt,DC=local'	
+
+További parancsok ADUser használatához: 
+	Get-Help Get-ADUser segítséget adhat az adott parancs használatára
+
+	Get-ADUser vagy Set-ADUser esetén például:
+
+		Get-ADUser -Identity Teszt3
+				
+	Get-ADGroup vagy Set-ADGroup esetén például:
+
+		Get-ADGroup -Identity tesztelokGrp
+
+---------------------------
+
+DNS kiszolgáló 
+
+DNS kiszolgáló zónáinak lekérdezése:
+
+	Get-DnsServerZone	
+
+Címkeresési zóna létrehozása: (a példa kedvéért: zuzda.hu domain)
+
+	Add-DnsServerPrimaryZone -Name "zuzda.hu" -ZoneFile "zuzda.hu.dns"
+
+		ellenõrizzük a DNS kiszolgálókezelõben a címkeresési zóna létrejöttét
+
+DNSServer modulban használható parancsok listája:
+
+	Get-Command -Module DNSServer -Name *record*
+
+a listából kiválasztva egy parancsot, kérhetünk részletesebb leírást a használatról:
+
+	Get-Help Add-DnsServerResourceRecordA
+
+A-rekord felvétele, törlése, listázása:
+
+	Add-DnsServerResourceRecordA -ZoneName teszt.local -Name www -IPv4Address 192.168.10.1
+
+ellenõrizzük a DNS kiszolgálóban az A record létrejöttét:
+
+	Get-DnsServerResourceRecord -ZoneName teszt.local -RRType A
+	
+ha nincs rá szükség, töröljük az elõzõ rekordot (megerõsítést fog kérni!):
+
+	Remove-DnsServerResourceRecord -ZoneName teszt.local -Name www -RRType A
+
+Kérdezzük le a szerverünk nevét:
+
+	hostname
+
+Majd a kapott nevet felhasználva, kérjünk listát a szerverünk milyen A-rekord bejegyzésekben szerepel: (itt a neve: srv1-dc)
+
+	Get-DnsServerResourceRecord -ComputerName srv1-dc -ZoneName teszt.local -RRType A
+
+A kapott lista segítségével már  ALIAS nevet (www.teszt.local) is létre tudunk hozni a szerverünkhöz:
+
+	Add-DnsServerResourceRecordCName -Name "www" -HostNameAlias "srv1-dc.teszt.local" -ZoneName "teszt.local"
+
+Ellenõrizzük a DNS kiszolgálóban az ALIAS (CNAME) record létrejöttét:
+
+	Get-DnsServerResourceRecord -ZoneName teszt.local -RRType CName
+
+Névkeresési zóna létrehozása:
+
+	Add-DnsServerPrimaryZone -NetworkID 192.168.10.0/24 -ZoneFile "10.168.192.in-addr.arpa.dns"
+
+PTR-rekord felvétele:
+
+	Add-DnsServerResourceRecordPtr -ZoneName '10.168.192.in-addr.arpa' -Name 2 -PtrDomainName srv1-dc.teszt.local
+
+PTR-rekord ellenõrzése:
+
+	Get-DnsServerResourceRecord -ZoneName '10.168.192.in-addr.arpa'
+
+PTR-rekord törlése:
+	
+	Remove-DnsServerResourceRecord -Name 2 -ZoneName 10.168.192.in-addr.arpa -RRType Ptr
+
+----------------------------
+	
+DHCP konfigurálása
+
+A szerepkör hozzáadása:
+	
+	Install-WindowsFeature DHCP -IncludeManagementTools 
+
+# DHCP hozzáadása biztonsági csoportokhoz:
+
+	netsh dhcp add securitygroups
+
+# A DHCP kiszolgáló engedélyezése/hitelesítése az Active Directory-ban:
+# (ügyelve, hogy a számítógép név egyezzen. Itt a gép neve: srv1-dc)
+
+	Add-DhcpServerInDC -DnsName srv1-dc.teszt.local -IPAddress 192.168.10.1
+
+# A tartomány DHCP kiszolgálójának lekérdezése:
+	
+	Get-DhcpServerInDC
+
+# A kiszolgálókezelõ frissítése, hogy a DHCP post-install konfigurációja elvégezve állapotot mutasson:
+# 	ez a lépés opcionális (ha nem tünne el a kiszolgálókezelõben a kis sárga háromszöges figyelmeztetés: 'DHCP-konfigurálás befejezése')
+
+	Set-ItemProperty –Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerManager\Roles\12 –Name ConfigurationState –Value 2
+
+# DHCP kiszolgáló újraindítása, ha szükséges:
+	
+	Restart-Service dhcpserver
+
+# A DHCP szerepkör telepítve van, konfiguráljuk manuálisan:
+
+# Hatókör beállítása: ('LAN' néven hozza létre, de azonosításra a 'ScopeID'-t használjuk majd!)
+	
+	Add-DhcpServerv4Scope -name LAN -StartRange 192.168.10.1 -EndRange 192.168.10.254 -SubnetMask 255.255.255.0 -State Active
+
+# Kizárt tartomány hozzáadása: (a 'ScopeID' a hálózat címe alapján generálódik, itt: 192.168.10.0)
+	
+	Add-DhcpServerv4ExclusionRange -ScopeID 192.168.10.0 -StartRange 192.168.10.1 -EndRange 192.168.10.24
+
+# Átjáró hozzáadása a hatókör beállításokhoz: (figyelve a számítógép nevére! Itt a szerver neve: srv1-dc)
+
+	Set-DhcpServerv4OptionValue -OptionID 3 -Value 192.168.10.254 -ScopeID 192.168.10.0 -ComputerName srv1-dc.teszt.local
+
+# Bérleti idõ megadása: (1 nap 3 óra 2 perc)
+
+	Set-DhcpServerv4Scope -ScopeId 192.168.10.0 -LeaseDuration 1.03:02:00
+
+# Fenntartás felvétele: (kliens MAC-címe: 'F0-DE-F1-7A-00-5E' Szg.neve: 'Win10Kliens')
+
+	Add-DhcpServerv4Reservation -ScopeId 192.168.10.0 -IPAddress 192.168.10.8 -ClientId "F0-DE-F1-7A-00-5E" -Name "Win10Kliens"
+
+# A DNS tartománynevet és kiszolgálót megadhatjuk többféleképpen:
+
+# DNS tartománynév és kiszolgáló hozzáadása a 'Kiszolgálói beállításai'-hoz: (minden hatókörre vonatkozni fog!)
+	
+	Set-DhcpServerv4OptionValue -DnsDomain teszt.local -DnsServer 192.168.10.1
+
+# Csak adott hatókörre (ScopeID) vonatkozó beállítások megadása (dns server, domain, gw.) egyszerre:
+
+	Set-DhcpServerv4OptionValue -ScopeID 192.168.10.0 -DNSServer 192.168.10.1 -DNSDomain teszt.local -Router 192.168.10.1
+
+
+*************** Kis kitérõ a Ps parancsfájlok felé ***************
+
+Ha a DHCP szerepkör már telepítve van, egy scriptbe is foglalhatjuk a hatókörünk beállítását
+(az elõzõleg létrehozott hatókörünket és a kiszolgáló beállításait ez esetben most töröljük, mielõtt futtatjuk ezt a scriptet!)
+
+# A c:\psMappa helyen hozzunk létre dhcp.ps1 néven egy normál szöveges állományt, a tartalma legyen:
+
+# fájl kezdete
+# dhcp hatókör beállító parancsfájl, server: srv1-dc, domain: teszt.local
+
+# Hatókör beállítása ('LAN' néven hozza létre):
+	Add-DhcpServerv4Scope -name LAN -StartRange 192.168.10.1 -EndRange 192.168.10.254 -SubnetMask 255.255.255.0 -State Active
+
+# Kizárt tartomány hozzáadása:
+	Add-DhcpServerv4ExclusionRange -ScopeID 192.168.10.0 -StartRange 192.168.10.1 -EndRange 192.168.10.24
+
+# Átjáró hozzáadása a hatókör beállításokhoz:	
+	Set-DhcpServerv4OptionValue -OptionID 3 -Value 192.168.10.1 -ScopeID 192.168.10.0 -ComputerName srv1-dc.teszt.local
+
+# DNS tartománynév és kiszolgáló hozzáadása a hatókör beállításokhoz:
+	Set-DhcpServerv4OptionValue -DnsDomain teszt.local -DnsServer 192.168.10.1
+
+# Bérleti idõ megadása: (1 nap 3 óra 2 perc)
+	Set-DhcpServerv4Scope -ScopeId 192.168.10.0 -LeaseDuration 1.03:02:00
+
+# Fenntartás felvétele:
+	Add-DhcpServerv4Reservation -ScopeId 192.168.10.0 -IPAddress 192.168.10.8 -ClientId "F0-DE-F1-7A-00-5E" -Name "Win10Kliens"
+
+# DHCP koszolgáló újraindítása:
+	Restart-Service dhcpserver
+
+# fájl vége
+
+
+Mentés után, irány a c:\
+	
+	c:
+	
+	cd c:\psMappa
+	
+Futtassuk le a scriptet:
+
+	dhcp.ps1
+
+*************** Kis kitérõ a Ps parancsfájlok felé ***************
+
+---------------------------------
+
+Távelérés (VPN) telepítése:
+
+	Install-WindowsFeature RemoteAccess, DirectAccess-VPN, Web-Server -IncludeManagementTools
+
+VPN alatt ezek a szerepkör-szolgáltatások települnek (ezeket már nem kell telepíteni külön:)
+
+	Web-Filtering, Web-IP-Security
+
+Ha VPN által telepített Web-kiszolgáló szerepkör-szolgáltatásokat szeretnénk bõvíteni: 
+	(az a bizonyos 5 Biztonsági szerepkör-szolgáltatás)
+
+	Install-WindowsFeature Web-Basic-Auth, Web-Windows-Auth, Web-URL-Auth
+
+WEB és FTP ha önállóan telepítjük: (a szokásos 5 db biztonsági szolgáltatás és az FTP)
+
+	Install-WindowsFeature Web-Filtering, Web-Basic-Auth, Web-Windows-Auth, Web-IP-Security, Web-URL-Auth, Web-FTP-Server
+
+---------------------------------
+	
+CA telepítése:
+	
+# Töltsük be a Kiszolgálókezelõ modult:
+	
+	Import-Module ServerManager
+
+# Telepítsük a CA szerepkört:
+
+	Install-WindowsFeature AD-Certificate -IncludeManagementTools 
+ 
+# Konfiguráljuk a gyökér (Root) CA-t: (megerõsítésként nyomjunk 'Enter'-t, mindkétszer)
+
+	Install-AdcsCertificationAuthority -CACommonName "tesztCA" -CAType EnterpriseRootCa -HashAlgorithmName SHA256 -KeyLength 2048 -ValidityPeriod Years -ValidityPeriodUnits 3
+ 
+# Telepítsük a CA Web-es igénylés szerepkör-szolgáltatást:  (ha szükséges..)
+	Install-WindowsFeature ADCS-Web-Enrollment
+# Konfiguráljuk a CA Web-es igénylést: 	(ha szükséges..)
+	(létrehozza a webszerveren CertSrv oldalt, stb...) (megerõsítésként nyomjunk 'Enter'-t)
+	Install-AdcsWebEnrollment
+	
+---------------------------------
+
+# Végül ellenõrizzük milyen szerepköröket és szolgáltatásokat telepítettünk: 
+
+	Get-WindowsFeature | ? Installed 
