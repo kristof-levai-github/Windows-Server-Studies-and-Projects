@@ -1,0 +1,15 @@
+DN,objectClass,sAMAccountName,sn,givenName,userPrincipalName,userAccountControl
+"cn=Ed Meadows,OU=ceg,dc=ceg,dc=local",user,ed,Meadows,Ed,ed@ceg.local,8389152
+"cn=Scott Bishop,OU=ceg,dc=ceg,dc=local",user,scott,Bishop,Scott,scott@ceg.local,8389152
+"cn=Neil Charney,OU=ceg,dc=ceg,dc=local",user,neil,Charney,Neil,neil@ceg.local,8389152
+"cn=Jens Geschwandtner,OU=ceg,dc=ceg,dc=local",user,jens,Geschwandtner,Jens,jens@ceg.local,8389152
+"cn=Bart Duncan,OU=ceg,dc=ceg,dc=local",user,bart,Duncan,Bart,bart@ceg.local,8389152
+"cn=Sidney Hiiga,OU=ceg,dc=ceg,dc=local",user,sidney,Hiiga,Sidney,sidney@ceg.local,8389152
+"cn=Tengiz Kharatishvili,OU=ceg,dc=ceg,dc=local",user,tengiz,Kharatishvili,tengiz,Tengiz@ceg.local,8389152
+"cn=Anders Madsen,OU=ceg,dc=ceg,dc=local",user,anders,Madsen,Anders,anders@ceg.local,8389152
+"cn=Bobby Moore,OU=ceg,dc=ceg,dc=local",user,bobby,Moore,Bobby,bobby@ceg.local,8389152
+"cn=Mandar Samant,OU=ceg,dc=ceg,dc=local",user,mandar,Samant,Mandar,mandar@ceg.local,8389152
+"cn=Susanna Stubberod,OU=ceg,dc=ceg,dc=local",user,susanna,Stubberod,Susanna,susanna@ceg.local,8389152
+"cn=Peter Waxman,OU=ceg,dc=ceg,dc=local",user,peter,Waxman,Peter,peter@ceg.local,8389152
+"cn=Alan Brewer,OU=ceg,dc=ceg,dc=local",user,alan,Brewer,Alan,alan@ceg.local,8389152
+"cn=Max Stevens,OU=ceg,dc=ceg,dc=local",user,max,Stevens,Max,max@ceg.local,8389152
