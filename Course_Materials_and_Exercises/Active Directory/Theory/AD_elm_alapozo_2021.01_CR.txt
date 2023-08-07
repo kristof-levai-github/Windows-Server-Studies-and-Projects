@@ -1,0 +1,35 @@
+BUÉK!
+
+A dolgok jelenlegi állása szerint jövőhéten már a suliban folytatjuk..
+viszont..
+Új témával folytatjuk: Active Directory 
+
+Mivel ehhez a nulláról telepítünk majd szervert és klienst is, a hétre leginkább csak elméleti anyagot adnék, kis gyakorlati ismétléssel 
+(aki úgy érzi, a virtuális gép telepítése gondot okozhat).
+
+Olvassák át a következőket:
+AD_elm_bevezetes_2021.docx: ebben néhány alapfogalommal és a főbb kifejezésekkel ismerkedhetnek meg.
+Active Directory 2021.pptx: ez tömörebben tartalmazza az AD alapokat, de itt-ott ki is egészíti.
+
+AD_alap_2021.docx: gyakorlati feladat, amelyben egy alap telepítés feladatait és adatait találják meg. 
+Ugyanezekkel az adatokkal telepítünk majd a suliban is új gépeket, vegyék észre, hogy nincs még DNS kiszolgáló, csak DHCP. 
+
+És hogy meg legyen a digitális érzés, ajánlok néhány youtube videót 
+(kedvcsinálónak az AD-hoz, illetve az egyéni anyagok kereséséhez a témában). 
+A videók alapvetően Windows Server 2003/2008 körül készülhettek, de az AD elmélete ugyanaz. 
+És van benne sok szép ábra, kevés angoltudással is érthető, stb.. :)
+
+
+Active Directory 2021.pptx
+
+AD_elm_bevezetes_2021.docx
+
+AD_alapTelepites_2021.docx
+
+MCITP 70-640: Introduction To Active Directory
+	
+	https://youtu.be/OTpbQkW3kj4
+	
+MCITP 70-640: Active Directory forest and trees
+
+	https://youtu.be/Whh3kPS0FdA
