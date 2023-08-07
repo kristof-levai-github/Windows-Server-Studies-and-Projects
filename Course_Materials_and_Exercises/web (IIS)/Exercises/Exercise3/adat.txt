@@ -1,0 +1,3 @@
+adat.txt tartalma
+
+a webhelyen használt felhasználói nevek: teszt1, user1
