@@ -1,0 +1,14 @@
+[fájlnév].csv fájlt megnyitva, ellenõrizzük:
+
+az AD tartomány létezik-e? 
+	neve egyezik a [fájlnév].csv-ben szereplõvel?	a .csv fájlban keressük: (... dc=gyakorlat, dc=local ...)
+	
+szervezeti egységek létrehozva mind?	a .csv fájlban keressük ezeket: (... ou=piac, ...)
+
+[fájlnév].csv fájl elérési útja?
+
+	[meghajtó]:\[fájlnév].csv		pl. m:\csv\valami.csv
+
+ha minden elõkészítve:
+
+	csvde -i -f [meghajtó]:\[fájlnév].csv		pl. csvde -i -f m:\csv\users.csv

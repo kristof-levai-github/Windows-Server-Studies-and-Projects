@@ -1,0 +1,5 @@
+DN,															objectClass,	sAMAccountName,	sn,			givenName,	userPrincipalName,	userAccountControl
+"cn=Kakukk Irma,	ou=titkarno,	dc=ceg,dc=local",		user,			irma,			Kakukk,		Irma,		irma@ceg.local,		8389152
+"cn=Tornyos Ibolya,	ou=titkarno,	dc=ceg,dc=local",		user,			ibolya,			Tornyos,	Ibolya,		ibolya@ceg.local,	8389152
+"cn=Truffel Imre,	ou=fonok,		dc=ceg,dc=local",		user,			imre,			Truffel,	Imre,		imre@ceg.local,		8389152
+"cn=Szeremley Iván,	ou=fonok,		dc=ceg,dc=local",		user,			ivan,			Szeremley,	Ivan,		ivan@ceg.local,		8389152

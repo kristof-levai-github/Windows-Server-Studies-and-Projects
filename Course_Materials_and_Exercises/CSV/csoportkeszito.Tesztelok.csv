@@ -1,0 +1,2 @@
+DN,objectClass,cn,name,sAMAccountName,member,groupType
+"CN=tesztelok,OU=Tesztelok,DC=gyakorlat,DC=local",group,tesztelok,tesztelok,tesztelok,"CN=mintaTesztelo,OU=Tesztelok,DC=gyakorlat,DC=local",-2147483646

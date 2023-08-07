@@ -1,0 +1,2 @@
+DN,objectClass,cn,sn,description,givenName,distinguishedName,displayName,name,userAccountControl,homeDirectory,homeDrive,scriptPath,userWorkstations,profilePath,sAMAccountName,userPrincipalName
+"CN=mintaTesztelo,OU=Tesztelok,DC=gyakorlat,DC=local",user,mintaTesztelo,minta,mintaTesztelo,Tesztelo1,"CN=mintaTesztelo,OU=Tesztelok,DC=gyakorlat,DC=local",mintaTesztelo,mintaTesztelo,514,\\\\srv1\\home\\mintaTesztelo,Z:,loginTesztelok.bat,win10,\\\\srv1\\zProfilok$\\mintaTesztelo,mintaTesztelo,mintaTesztelo@gyakorlat.local
