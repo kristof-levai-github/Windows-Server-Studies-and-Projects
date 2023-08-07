@@ -1,0 +1,10 @@
+DN,objectClass,sAMAccountName,sn,givenName,userPrincipalName,userAccountControl
+"cn=Hallgato Egy,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato1,Hallgato,Egy,hallgato1@gyakorlat.local,8389152
+"cn=Hallgato Ketto,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato2,Hallgato,Ketto,hallgato2@gyakorlat.local,8389152
+"cn=Hallgato Harom,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato3,Hallgato,Harom,hallgato3@gyakorlat.local,8389152
+"cn=Hallgato Negy,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato4,Hallgato,Negy,hallgato4@gyakorlat.local,8389152
+"cn=Hallgato Ot,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato5,Hallgato,Ot,hallgato5@gyakorlat.local,8389152
+"cn=Hallgato Hat,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato6,Hallgato,Hat,hallgato6@gyakorlat.local,8389152
+"cn=Hallgato Het,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato7,Hallgato,Het,hallgato7@gyakorlat.local,8389152
+"cn=Hallgato Nyolc,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato8,Hallgato,Nyolc,hallgato8@gyakorlat.local,8389152
+"cn=Hallgato Kilenc,ou=Hallgatok,ou=Egyetem,dc=gyakorlat,dc=local",user,hallgato9,Hallgato,Kilenc,hallgato9@gyakorlat.local,8389152
