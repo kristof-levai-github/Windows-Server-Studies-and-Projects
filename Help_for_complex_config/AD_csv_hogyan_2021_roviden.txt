@@ -1,0 +1,13 @@
+.csv fájlt megnyitva, ellenõrizzük:
+
+tartomány létezik? neve egyezik a .csv-ben szereplõvel?
+	
+szervezeti egységek létrehozva mind?
+
+.csv fájl elérési útja? 
+
+	[meghajtó]:\[valami].csv
+
+ha minden elõkészítve:
+
+	csvde -i -f [meghajtó]:\[valami].csv
