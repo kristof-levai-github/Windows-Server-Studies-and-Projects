@@ -1,0 +1,22 @@
+1. SZERVER telepítés
+
+2. AD, ami a DNS-t is felrakja!
+
+3. GÉPNÉV + IP beállítása!
+
+4. Tartományvezérlõvé elõléptetni!
+
+5. DHCP, VPN + IIS (WEB - Biztonság, FTP)
+
+6. CA (tanúsítvány-hitelesítõ)
+
+
+Ha a c:\csv könyvtárba másolta a ceguser.csv fájlt >>
+
+!!! tartomány (aminek léteznie kell): 			ceg.local
+
+!!! szervezeti egység (aminek léteznie kell): 	ceg	
+
+ezután jöhet:
+
+	csvde -i -f c:\csv\ceguser.csv 
