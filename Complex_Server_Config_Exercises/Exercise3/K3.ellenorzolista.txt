@@ -1,0 +1,23 @@
+Ellenőrizendő:
+vGepek mappa tartalma: Win2016 és Win10Kliens
+netTeam1
+Felhasználó kezelőben: Szervezeti egység, felhasználók, csoport
+Kezdőmappa, a kliensen megjelenítve
+Mappa átirányításhoz létrehozott mappa szerveren megnyitva, benne pl. emma/Dokumentumok mappa
+teamWork mappa csatlakoztatva a kliensen W: betűjellel
+Kliensen diak nevű normál felhasználói fiókot létrehozta
+Kliensen látható egységes háttérkép és Chrome ikonja viszont az óra nincs ott Tálcán
+Kizárt címek a DHCP kiszolgálón
+DHCP által a kliensnek átadott információk: [ipconfig /all] megfelelő szakasza
+Jelszóházirend a Default Domain Policy-ben
+Kezdőmappa felhasználónkénti kvótája
+Megosztott mappa összméret kvótája
+Fájlszűrés kezdőmappákra
+Önaláírt és tartományi tanúsítványok létrehozva, HTTPS kötésben felhasználva
+Weblaphoz hozzáférés korlátozás csoport szerint
+Átirányítás http-https, hibalappal
+IE automatikus indítása és kezdőlap beállítva
+VPN kapcsolathoz tartozó hálózati házirend szabály feltételei (csoport, idő, hitelesítés, alagút protokoll)
+VPN kapcsolat részletei megjelenítve a kliensen
+
+

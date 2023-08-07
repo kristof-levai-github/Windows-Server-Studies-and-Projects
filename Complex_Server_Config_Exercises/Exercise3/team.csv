@@ -1,0 +1,5 @@
+DN,objectClass,sAMAccountName,sn,givenName,userPrincipalName,userAccountControl
+"cn=Viola Nyeste,ou=team,dc=maximus,dc=local",user,viola,Nyeste,Viola,viola@maximus.local,8389152
+"cn=Edit Tokaji,ou=team,dc=maximus,dc=local",user,edit,Tokaji,Edit,edit@maximus.local,8389152
+"cn=Judit Barta,ou=team,dc=maximus,dc=local",user,judit,Barta,Judit,judit@maximus.local,8389152
+"cn=Emma Morvai,ou=team,dc=maximus,dc=local",user,emma,Morvai,Emma,emma@maximus.local,8389152
