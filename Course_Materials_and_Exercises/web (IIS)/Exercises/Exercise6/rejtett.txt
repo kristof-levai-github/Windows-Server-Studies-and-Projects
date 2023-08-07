@@ -1,0 +1,2 @@
+Ez a rejtett.txt nevû fájl tartalma :)
+Ne felejtse el az .rtf és a .txt kiterjesztésû fájlokat rejtetté tenni!
